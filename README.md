@@ -1,8 +1,10 @@
 # express-scss
-express middleware compile scss file to css , and pure js.
+compile scss file to css , and pure js.
 
 # install
+```
   npm install s2css
+```
 
 # use
 ```
