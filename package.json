@@ -1,6 +1,9 @@
 {
   "name": "s2css",
-  "version": "1.0.0",
+  "bin":{
+    "s2css":"./bin/s2css"
+  },
+  "version": "1.1.1",
   "description": "express middleware compile scss file to css , and pure js.",
   "main": "index.js",
   "dependencies": {

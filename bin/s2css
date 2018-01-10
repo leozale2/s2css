@@ -1,0 +1,45 @@
+#!/usr/bin/env node
+
+const compile = require("../compile");
+const fs = require("fs");
+const path  = require("path");
+const initDestDir = require("../initDestDir");
+const getFileFullName = require("../getFileFullName");
+const watchCompile = require("..");
+let argv = process.argv;
+
+if(argv.length < 4) throw new Error("please input src and dest path.")
+let src = argv[2];
+let dest = argv[argv.length-1];
+let isWatch = false;
+let srcIsFile;
+let destIsFile;
+if(argv.length > 4){
+  isWatch = argv[3] === "-w";
+}
+if(src && dest){
+  srcIsFile = fs.statSync(src).isFile();
+  try{
+    fs.accessSync(dest);
+  }catch(err){
+    let isCSSExt = destIsFile = dest.split(/(\/|\\)/).pop() === "css";
+    if(!destIsFile){
+      initDestDir(dest);
+    }
+  }
+
+  if(srcIsFile){
+    compile(src,destIsFile ? dest : path.join(dest,getFileFullName(src)[0]+".css"));
+  }else if(!destIsFile){
+
+    if(!isWatch){
+      const list = fs.readdirSync(src);
+      list.forEach(filename=>compile(path.join(src,filename),path.join(dest,getFileFullName(filename)[0]+".css")))
+    }else{
+      watchCompile(src,dest);
+    }
+  }
+
+}else{
+  console.log("please input src and dest path.");
+}
