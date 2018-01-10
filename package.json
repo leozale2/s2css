@@ -1,0 +1,24 @@
+{
+  "name": "s2css",
+  "version": "1.0.0",
+  "description": "express middleware compile scss file to css , and pure js.",
+  "main": "index.js",
+  "dependencies": {
+    "sass.js": "^0.10.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liangzeng/s2css.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liangzeng/s2css/issues"
+  },
+  "homepage": "https://github.com/liangzeng/s2css#readme"
+}
