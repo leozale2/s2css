@@ -1,4 +1,4 @@
-# express-scss
+# s2css
 compile scss file to css , and pure js.
 
 # install
