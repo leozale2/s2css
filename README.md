@@ -37,3 +37,24 @@ s2css src/a.scss dest/b.css
   // then compile src/xxx.scss to dest/xxx.css.
   s2css("src","dest");  
 ```  
+
+# browser
+
+```
+npm install s2css
+```
+
+```
+<script src="node_modules/s2css/s2css.js"></script>
+
+<style src="text/scss">
+$bgcolor : blue;
+body{
+  background-color: $bgcolor;
+}
+</style>
+```
+
+# LICENSE
+
+MIT
