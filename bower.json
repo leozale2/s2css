@@ -1,0 +1,22 @@
+{
+  "name": "s2css",
+  "description": "compile scss file to css",
+  "main": "s2css.js",
+  "authors": [
+    "liangzeng"
+  ],
+  "license": "mit",
+  "keywords": [
+    "sass",
+    "scss",
+    "css"
+  ],
+  "homepage": "https://github.com/liangzeng/s2css",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

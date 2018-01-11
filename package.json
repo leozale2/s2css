@@ -1,7 +1,7 @@
 {
   "name": "s2css",
-  "bin":{
-    "s2css":"./bin/s2css"
+  "bin": {
+    "s2css": "./bin/s2css"
   },
   "version": "1.1.1",
   "description": "express middleware compile scss file to css , and pure js.",
@@ -9,7 +9,11 @@
   "dependencies": {
     "sass.js": "^0.10.7"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "browserify": "^15.1.0",
+    "gulp-cli": "^2.0.0",
+    "webpack": "^3.10.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
